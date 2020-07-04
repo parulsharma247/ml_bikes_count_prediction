@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cardio Disease Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+    
+    body {font-family: 'Open Sans', sans-serif !important;}
+    label{font-family: sans-serif; font-size: 18px; margin-top: 15px;}
+    .container-fluid{padding-left: 0px; padding-right:0px;}
+    .heading{background-color: #22A39F;color: #fff; padding: 30px; margin-bottom: 30px; text-align: center;}
+    .form-control(margin-bottom: 40px;)
+    .label-dim(margin-bottom: 35px;)
+  
+  </style>>
+
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class ='heading'>
+      <h2><strong> Bikes Count Prediction </strong></h2>
+       <hr style="width: 50%;">
+    </div>
+     
+     <div class="row">
+      <div class="column" style=" width: 30%; margin: 10px 5% 10px 15%">
+
+        <form action="/predict" method = "post" >
+            
+            <div class="form-group">
+                <label for="season" style="width: 225px; margin-bottom: 30px;">Choose a Season:</label>
+                <select name="choosen_season" id="season" required="required">
+                  <option value="Spring">Spring</option>
+                  <option value="Summner">Summner</option>
+                  <option value="Rainy">Rainy</option>
+                  <option value="Winter">Winter</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+             <label for="holiday" style="width: 225px; margin-bottom: 30px;">Is a Govt Holiday:</label>
+                <select name="choosen_govt_holiday" id="holiday" required="required">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+             </div>
+
+            <div class="form-group">
+             <label for="workingday" style="width: 225px; margin-bottom: 30px;">Is a Working Day :</label>
+                <select name="choosen_workingday" id="workingday" required="required">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+            </div>
+
+            
+            <div class="form-group">
+             <label for="weather" style="width: 225px; margin-bottom: 30px;">Choose Weather type:</label>
+                <select name="choosen_weather" id="weather" required="required">
+                  <option value="Clear">Clear or partly clouds</option>
+                  <option value="Cloudy">Mist and Cloudy</option>
+                  <option value="Rainy">Light Snow or Rain</option>
+                  <option value="Rain_with_Ice">Heavy Rain or Snow</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+              <label style="width: 225px; margin-bottom: 30px;">Which Hour of the day:</label>
+              <select name="choosen_hour" id="hour" required="required">
+                  <option value="0">00:01 - 06:00</option>
+                  <option value="1">06:01 - 13:00</option>
+                  <option value="2">13:01 - 19:00</option>
+                  <option value="3">19:01 - 00:00</option>
+                </select>
+            </div>
+
+
+        </div>
+
+
+         <div class="column" style=" width: 30%; margin: 10px 10% 10px 5%">
+
+
+            <div class="form-group">
+              <label>Temperature:</label>
+              <input type="number" class="form-control" placeholder="Enter Normalised Temp (in degree Celcius) " name="temperature">
+            </div>
+
+            <div class="form-group">
+              <label>Temperature Felt Approx</label>
+              <input type="number" class="form-control" placeholder="Enter Normalized Feeling Temp(in degree Celcius) " name="felttemp">
+            </div>
+
+            <div class="form-group">
+              <label >Humidity:</label>
+              <input type="number" class="form-control" placeholder="Humidity in (grams per cubic metre)" name="humidity">
+            </div>
+
+            <div class="form-group">
+              <label >Windspeed:</label>
+              <input type="number" class="form-control" placeholder="Windspeed in (km/hr)" name="windspeed">
+            </div>
+
+            
+            
+
+          </div>
+
+       <button type="submit" class="btn btn-primary" style="margin-left: 45%; margin-right: 10%; margin-top:50px; margin-bottom: 100px;"> Check Proability </button>    
+
+      </form>
+     </div>
+    </div>
+    <br>
+    <br>
+   </div>
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+ </body>
+</html>
+
+	

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+
+        body {font-family: 'Open Sans', sans-serif !important; text-size: }
+        .container-fluid{padding-left: 0px; padding-right:0px;}
+        .heading{background-color: #22A39F;color: #fff; padding: 30px; margin-bottom: 30px; text-align: center;}
+        .result-section {margin-top: 150px; margin-left: 30%; margin-right: 24%; margin-bottom: 200px; color: #22A39F,
+            text_size: 30px;}
+        .card{color: #22A39F}
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class='heading'>
+        <h2><strong> Bikes Count Prediction </strong></h2>
+        <hr style="width: 50%;">
+    </div>
+
+    <div class="row">
+       <h1 class="result-section card">
+        <strong>{{prediction_text}}</strong>
+        </h1>
+    </div>
+
+
+</body>
+</html>
